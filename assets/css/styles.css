@@ -145,7 +145,7 @@ img {
   color: var(--first-color);
 }
 
-.nav__buttons{
+.nav__buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -215,7 +215,7 @@ img {
   margin-bottom: 2.5rem;
 }
 
-.home__button{
+.home__button {
   display: inline-block;
   background: var(--gradient-color);
   color: var(--white-color);
@@ -250,10 +250,146 @@ img {
   position: absolute;
   max-width: initial;
   /* width: 600px; */
-  width: max-content;
   left: -7rem;
   bottom: 0;
 }
 
+/*============== BREAKPOINTS =======*/
 
- 
+@media screen and (max-width:305px){
+  .container{
+    margin-inline: 1rem;
+  }
+
+  .home__title{
+    font-size: 2rem;
+
+  }
+}
+
+@media screen and (min-width: 376px) and (min-height: 800px){
+  .home__container{
+    padding-top: 10rem;
+  }
+
+  .home__images img{
+    /* width: 700px; */
+    left: -12rem;
+  }
+}
+
+@media screen and (min-width: 480px){
+  .home__content{
+    max-width: 305px;
+  }
+  .home__bird-2{
+    right: -3rem;
+
+  }
+  
+  .home__images img{
+    width: initial;
+    left: 0;
+  }
+
+}
+ @media screen and (min-width: 1023px){
+  .nav{
+    height: calc(var(--header-height) + 2rem);
+    column-gap: 4rem;
+  }
+
+  .nav__toggle,
+  .nav__close{
+display: none;
+  }
+
+  .nav__menu {
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+  }
+
+  .nav__list{
+    flex-direction: row;
+    column-gap: 5rem;
+  }
+
+  .nav__buttons{
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+
+  .nav__logo{
+    width: 48px;
+  }
+  .home__content{
+    max-width: 550px;
+  }
+  .home__data{
+    row-gap: 1rem;
+  }
+
+  .home__subtitle{
+    font-size: var(--normal-font-size);
+
+  }
+  .home__description{
+    margin-bottom: 3rem;
+  }
+ }
+
+ @media screen and (min-width: 1120px){
+  .container{
+    margin-inline: auto;
+  }
+
+  
+ }
+
+ @media screen and (min-width: 1300px){
+  .home__container{
+    height: 950px;
+    padding-top: 10rem;
+  }
+  .home__bird-1,
+  .home__bird-2{
+    width: 80px;
+  }
+  .home__bird-1{
+    bottom: -7rem;
+    left: -7rem;
+  }
+
+  .home__bird-2{
+    top: 0;
+    right: -6rem;
+  }
+
+  .home__images img{
+    bottom: -3rem;
+  }
+
+  ::-webkit-scrollbar{
+    width: .6rem;
+    border-radius: .5rem;
+    background-color: hsl(220, 24%, 15%);
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background-color: hsla(220, 24%, 25%);
+  }
+
+
+ }
+ @media screen and (min-width: 2048px){
+  .container{
+    max-width: 1300px;
+  }
+
+  .home__container{
+    height: 1200px;
+    padding-top: 15rem;
+  }
+ }
